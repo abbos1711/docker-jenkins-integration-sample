@@ -3,7 +3,7 @@ node{
     git 'https://github.com/abbos1711/docker-jenkins-integration-sample'
   }
   stage('Compile-Package'){
-    def mvnHome = tool name: '', type: 'maven'
+    def mvnHome = tool name: 'Maven', type: 'maven'
     sh "${mvnHome}/bin/mvn package"
   }
 
