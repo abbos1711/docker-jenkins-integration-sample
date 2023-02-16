@@ -6,4 +6,9 @@ node{
     def mvnHome = tool name: 'Maven', type: 'maven'
     sh "${mvnHome}/bin/mvn package"
   }
+  stage('Email Notification'){
+    mail bcc: '', body: '''HI welcome to JEnkins mail
+    It is interesting
+    Be healthy''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'rewilderkevin@gmail.com'
+  }
 }
